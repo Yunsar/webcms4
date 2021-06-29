@@ -17,3 +17,4 @@ Valid credentials: s5000001:password
 * Business logic vulnerability: uploading pic with a file name used by another user's pic replaces it
 * Unrestricted file upload: unprocessed image stored on server, including GPS coordinates in EXIF data for user s5000005's pic
 * Server-side template injection in update bio field (using Jinja2)
+* Profile pic URL field vulnerable to server-side request forgery
