@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WebCMS4</title>
+	<link rel="stylesheet" href="/static/css/main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<header>
+<nav>
+	<a class="logo" href="/">WebCMS4</a>
+	<a class="nav-search" href="/courses"><span class="material-icons">search</span></a>
+	<a class="nav-profile" href="/profile/{{user[0]}}"><img src="/getimage?image={{user[2]}}"></a>
+</nav>
+</header>
+<main>
+	<div class="course-container">
+		<aside class="course-side">
+			<div class="course-side-title">COMP6443 21T2</div>
+			<a class="side-link" href="/">Home</a>
+			<a class="side-link active" href="/outline">Course Outline</a>
+			<a class="side-link" href="/assignments">Assignments</a>
+		</aside>
+		<section class="course-main">
+			<h1>Course Outline</h1>
+
+			<article>
+			<div class="notice-title">Summary of the course</div>
+			<p>Web applications are currently the predominant source of software vulnerabilities exploited in online attacks worldwide. Most of these attacks exploit simple and easily remedied classes of security vulnerabilities. There is a clear and vastly unmet need for all web programmers to be security literate. There is also a substantial worldwide shortage of security professionals capable of assessing the security of Web Applications.</p>
+			<p>These related courses cover the main types of web application vulnerabilities and introduce current professional best practices in Web design, coding and testing providing the knowledge and introductory skills needed to successfully develop and test secure web applications.</p>
+			<p>The core level course is an important course to take if you wish to develop or rely upon web applications, or will have risk, or governance responsibilities in any organisation which uses or develops web applications i.e. just about everyone.</p>
+			<p>The extended level course is for security professionals or professional web developers and covers a wider range of vulnerabilities and in greater depth than the core level courses.</p>
+			<p>Extended course content for COMP6843 students will be covered in the extended lecture. COMP6443 students are welcome to attend the extended lecture if you are interested.</p>
+			</article>
+		</section>
+	</div>
+</main>
+</div>
+
+
+</body>
+</html>

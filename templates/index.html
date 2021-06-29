@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WebCMS4</title>
+	<link rel="stylesheet" href="/static/css/main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<header>
+<nav>
+	<a class="logo" href="/">WebCMS4</a>
+	<a class="nav-search" href="/courses"><span class="material-icons">search</span></a>
+	<a class="nav-profile" href="/profile/{{user[0]}}"><img src="/getimage?image={{user[2]}}"></a>
+</nav>
+</header>
+<main>
+	<div class="course-container">
+		<aside class="course-side">
+			<div class="course-side-title">COMP6443 21T2</div>
+			<a class="side-link active" href="/">Home</a>
+			<a class="side-link" href="/outline">Course Outline</a>
+			<a class="side-link" href="/assignments">Assignments</a>
+		</aside>
+		<section class="course-main">
+			<div class="course-main-title">Web Application Security</div>
+			<h1>Course Announcements</h1>
+
+			<article>
+			<div class="notice-title">Welcome to COMP6443</div>
+			<p>Welcome to COMP6443 Web Application Security!</p>
+			<p>This course will be hosted on the all new WebCMS4 platform. Clearly it is much more based than WebCMS3. Feel free to check out the course outline on the sidebar. The course page will be updated as the term progresses and you will start to see more content.</p>
+			</article>
+			<article>
+
+			<div class="notice-title">Assignment 1</div>
+			<p>We have been receiving many questions regarding assignment 1. Please note that the spec for assignment 1 is being prepared and is not ready yet. When it is ready you will be able to see it on the page for assignment 1.</p>
+			</article>
+		</section>
+	</div>
+</main>
+</div>
+
+
+</body>
+</html>

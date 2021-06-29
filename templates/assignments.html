@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WebCMS4</title>
+	<link rel="stylesheet" href="/static/css/main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<header>
+<nav>
+	<a class="logo" href="/">WebCMS4</a>
+	<a class="nav-search" href="/courses"><span class="material-icons">search</span></a>
+	<a class="nav-profile" href="/profile/{{user[0]}}"><img src="/getimage?image={{user[2]}}"></a>
+</nav>
+</header>
+<main>
+	<div class="course-container">
+		<aside class="course-side">
+			<div class="course-side-title">COMP6443 21T2</div>
+			<a class="side-link" href="/">Home</a>
+			<a class="side-link" href="/outline">Course Outline</a>
+			<a class="side-link active" href="/assignments">Assignments</a>
+		</aside>
+		<section class="course-main">
+			<h1>Assignments</h1>
+
+			<article>
+			<div class="notice-title">Assignment 1</div>
+			<p>Assignment 1 has not yet been released.</p>
+			<p>Check back here soon!</p>
+			</article>
+
+			<h1>Check Assignment Submission</h1>
+			<article>
+				<p>Note: you can also check your submission by running the command <code>checksubmission.sh &lt;assignment&gt;</code>
+
+				<form method="POST" class="search-form" onsubmit="cleanInput()">
+					<input type="text" name="assignment" placeholder="assignment" value="{{assignment}}">
+					<button type="submit">Check</button>
+				</form>
+				{% if output %}
+				<pre>{{output}}</pre>
+				{% endif %}
+
+				<script>
+					function cleanInput()
+					{
+						const inputEl = document.querySelector("input[name=assignment]");
+						const str = inputEl.value;
+						inputEl.value = str.replace(/[;&|$``{}()]/g, "");
+					}
+				</script>
+			</article>
+		</section>
+	</div>
+</main>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WebCMS4</title>
+	<link rel="stylesheet" href="/static/css/main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<header>
+<nav>
+	<a class="logo" href="/">WebCMS4</a>
+	<a class="nav-search" href="/courses"><span class="material-icons">search</span></a>
+	<a class="nav-profile" href="/profile/{{user[0]}}"><img src="/getimage?image={{user[2]}}"></a>
+</nav>
+</header>
+<main>
+	<h1>{{ name }}</h1>
+
+	<article>
+		<div class="profile-cont">
+			<img src="/getimage?image={{ image }}">
+			<div class="bio">
+				<h1>Bio</h1>
+				<div>{{ bio | safe}}</div>
+				{% if edit %}
+				<a href="/profile/{{user[0]}}/edit" class="edit-profile">Edit Profile</a>
+				{% endif %}
+			</div>
+		</div>
+	</article>
+
+</main>
+</div>
+
+
+</body>
+</html>
