@@ -1,10 +1,14 @@
 # WebCMS4
 A sample vulnerable application
 
-## Setup and Run
+## Setup and Run (Docker)
 ```
-pip3 install -r requirements.txt
-python3 run.py
+./run.sh
+```
+## Setup and Run (Flask)
+```
+pip3 install -r app/requirements.txt
+python3 app/run.py
 ```
 
 Valid credentials: s5000001:password

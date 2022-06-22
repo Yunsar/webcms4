@@ -67,13 +67,13 @@ def edit_profile(sid):
 	if request.method == "POST":
 		url = request.form.get("url", "").strip()
 		if url:
-			filepath = "images/" + os.path.basename(urlparse(url).path)
+			filepath = "uploads/profiles/images/" + os.path.basename(urlparse(url).path)
 			res = requests.get(url, allow_redirects=True)
 
 			with open(filepath, "wb") as f:
 				f.write(res.content)
 
-			User.update_image(sid, filepath)
+			User.update_image(sid, os.path.basename(filepath))
 
 		User.update_bio(sid, request.form.get("bio", ""))
 		user = User.get_user(sid)
@@ -92,7 +92,11 @@ def outline():
 
 @app.route("/getimage")
 def getimage():
-	return send_file(request.args.get("image"))
+	print(os.getcwd())
+	return send_file(os.getcwd() + "/uploads/profiles/images/" +
+			request.args.get("image"))
+	#return send_file(os.path.join(os.getcwd() + "/", "uploads/profiles/images/", 
+	#		request.args.get("image")))
 
 @app.route("/assignments", methods=["GET", "POST"])
 def assignments():
@@ -103,7 +107,7 @@ def assignments():
 
 	if request.method == "POST":
 		assign = request.form.get("assignment", "")
-		output = subprocess.check_output(["sh", "-c", "./checksubmission.sh " + 
+		output = subprocess.check_output(["bash", "-c", "./checksubmission.sh " + 
 				assign]).decode()
 		return render_template("assignments.html", user=user, assignment=assign, 
 				output=output)

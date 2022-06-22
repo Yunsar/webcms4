@@ -1,0 +1,19 @@
+COMP6443 ASSIGNMENT 1 SPEC
+
+Thank you for agreeing to help QuoccaBank do some preliminary security assessments. The security team at QB have asked you to do some initial assessments of the following parts of their website. According to the agency, it’s almost guaranteed to be secure.
+*.quoccabank.com
+However as an enterprising security researcher, feel free to browse around and use your initiative to discover information about QuoccaBank and its infrastructure.
+
+Task
+Find as many subdomains as you can by using reconnaissance. 
+Deadline
+Week 2 - Sunday 23.59pm
+Late Penalty
+Penalty for late submission of flags will be 50% (of each of the flags submitted late). No assignments will be accepted later than 24 hrs after the deadline.
+Details
+In order to help quoccabank understand how it may be exposed, you should help them discover all public subdomains on the *.quoccabank.com domain.
+
+Submission
+Submission will be through the ctfd platform. When you find a flag of the format comp6443{} submit it to the submission page of ctfd.quoccabank.com
+You will need to do the Getting Started tutorial in week 0 in order to create an account for the challenge platform quoccabank.com. 
+
